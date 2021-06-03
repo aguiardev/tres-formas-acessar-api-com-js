@@ -12,7 +12,7 @@
     <h1>Marcas de Carro</h1>
     <button onclick="searchXmlHttpReq()">Buscar (XML HTTP Request)</button>
     <br><br>
-    <button onclick="searchXAjax()">Buscar (AJAX)</button>
+    <button onclick="searchAjax()">Buscar (AJAX)</button>
     <br><br>
     <button onclick="searchFetchAPI()">Buscar (Fetch API)</button>
     <br><br>
@@ -41,8 +41,8 @@
             req.send();
         }
     
-        searchXAjax = () => {
-            console.log('searchXAjax');
+        searchAjax = () => {
+            console.log('searchAjax');
 
             var jqxhr = $.get(URL, function(data) {
                 let names = mapNames(data);
