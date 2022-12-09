@@ -23,7 +23,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-        const URL = 'http://fipeapi.appspot.com/api/1/carros/marcas.json';
+        const URL = 'https://parallelum.com.br/fipe/api/v1/carros/marcas';
         
         searchXmlHttpReq = () => {
             console.log('XMLHttpRequest');
@@ -36,7 +36,6 @@
     
             let req = new XMLHttpRequest();
             req.onload = reqListener;
-    
             req.open("get", URL, true);
             req.send();
         }
@@ -96,7 +95,7 @@
     
         clearItems = () => marcas.innerHTML = "";
     
-        mapNames = (list) => list.map((item) => item.name);
+        mapNames = (list) => list.map((item) => item.nome);
         
     </script>
 </body>
